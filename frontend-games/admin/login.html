@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script defer src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        body {
+            background-image: url(..//front_web/img/mant-bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box;
+            height: 100%;
+        }
+
+        header {
+            height: 10vh;
+            padding-right: 1rem;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            height: 90vh;
+        }
+        .page-admin {
+            height: 90vh;
+        }
+
+        aside {
+            width: 280px;
+            height: 90vh;
+        }
+        h1{
+            font-size: 1.8rem;
+        }
+        #btn-logout{
+            margin-left: 1rem;
+            padding: 5px;
+            
+        }
+        section{
+                background-color: rgb(255,255,255,0.2);
+                border-radius: 10px;
+                margin: 10px;
+                padding: 10px;
+            }
+        
+        .form-control{
+            border-radius: 20px;
+        }
+        
+
+    </style>
+    <script defer src="./js/app.js" type="module"></script>
+</head>
+
+<body>
+
+    <div id="page-login" class="d-flex justify-content-center align-content-center">
+        <section class=" w-25 border-2 pt-5" >
+            <h2>Login de usuario</h2>
+            <form>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label class="form-label">Email</label>
+                        <input id="field-login-email" type="text" class="form-control" placeholder="" required maxlength="20"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label class="form-label">Password</label>
+                        <input id="field-login-password" type="password" class="form-control" placeholder="" required />
+                    </div>
+                </div>
+                <section class="flex justify-content-end">
+                    <div class="text-center">
+                        <button id="btn-login" class="btn btn-info" type="button">Entrar</button>
+                    </div>
+                </section>
+            </form>
+            <section class="pt-3">
+                ¿No tienes usuario? 
+                <a href="#" id="btn-show-register">Regístrate</a> 
+            </section>
+        </section>
+    </div>
+
+    <div id="page-register" class="d-none text-bg-dark min-vh-100 d-flex justify-content-center align-content-center">
+        <section class="text-bg-dark w-25 border-2 pt-5" >
+            <h2>Registro de usuario</h2>
+            <form id="form-register">
+                <div class="row">
+                    <div class="col mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input id="field-register-name" type="text" class="form-control" placeholder="" required maxlength="20"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label class="form-label">Apellido</label>
+                        <input id="field-register-surname" type="text" class="form-control" placeholder="" required maxlength="20"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label class="form-label">Email</label>
+                        <input id="field-register-email" type="text" class="form-control" placeholder="" required maxlength="20"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label class="form-label">Password</label>
+                        <input id="field-register-password" type="password" class="form-control" placeholder="" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label class="form-label">Repite el password</label>
+                        <input id="field-register-repeat-password" type="password" class="form-control" placeholder="" required />
+                    </div>
+                </div>
+                <section class="flex justify-content-end">
+                    <div class="text-center">
+                        <button id="btn-register" class="btn btn-info" type="button">Registro</button>
+                    </div>
+                </section>
+            </form>
+            <section class="pt-3">
+                ¿Ya tienes usuario? 
+                <a href="#" id="btn-show-login">login</a> 
+            </section>
+        </section>
+    </div>
+
+    <div id="page-admin" class="d-none">
+        <header class="d-flex justify-content-between align-content-center p-2 text-bg-dark">
+            <h1>Panel de administración</h1>
+            <div class="d-flex align-content-center justify-content-around">
+                <div id="user-name"></div> 
+                <button id="btn-logout" class="btn btn-outline-danger p-1">logout</button>
+            </div>
+        </header>
+        <main>
+            <aside class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4">Menú</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page" data-link="CATEGORY">
+                            Categorías
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white" data-link="GAME">Games</a>
+                    </li>
+    
+                </ul>
+                <hr>
+            </aside>
+            <section class="page">
+                <iframe id="current-page" src="man-categories.html" width="100%" height="100%">
+                </iframe>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

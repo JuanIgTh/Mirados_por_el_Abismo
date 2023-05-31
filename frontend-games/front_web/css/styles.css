@@ -1,0 +1,143 @@
+html {
+    scroll-behavior: smooth;
+   /*Comenta la línea (o dale el valor 'auto' a scroll behavior )
+   para probar la diferencia con y sin scroll suavizado*/
+}
+   
+   #grid-quotes{
+        padding-top: 30px;
+       display: grid;
+       justify-content: center;
+       grid-template-columns: repeat(4, 22%);
+       gap: 1rem;
+   }
+   
+   .favorito-btn{
+    text-decoration: none;
+    border: none;
+    outline:none;
+    background-color: rgb(18,18,18, 0);
+   }
+   
+   #grid-favs{
+    padding-top: 30px;
+   display: grid;
+   justify-content: center;
+   grid-template-columns: repeat(4, 22%);
+   gap: 1rem;
+}
+
+   article{
+       border-radius: 5px;
+       border: 1px solid #ccc;
+       border-top-left-radius: 30px;
+       border-bottom-right-radius: 30px;
+       padding: 1rem;
+       height: 300px;
+       flex-direction: column;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+   }
+
+   article div{
+    border-radius: 7px;
+    padding: 3px;
+   }
+
+   .author-year{
+    display: flex;
+    justify-content: space-between;
+   }
+
+   nav{
+    background: rgb(18,18,18);
+    background: linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(0,212,255,0) 100%);
+   }
+
+    .background-Friedrich{
+        background-image:url(../img/nietzsche.png) ;
+        background-size: cover;
+        background-position:center;
+      
+    }
+
+    .background-Epicuro{
+        background-image:url(../img/epicuro.png) ;
+        background-size: cover;
+        background-position:center;
+      
+    }
+
+    .background-Arthur{
+        background-image:url(../img/schopenhauer.png) ;
+        background-size: cover;
+        background-position:center;
+      
+    }
+
+    .background-Sócrates{
+        background-image:url(../img/socrates.png) ;
+        background-size: cover;
+        background-position:center;
+      
+    }
+
+    .background-Sófocles{
+        background-image:url(../img/sofocles.png) ;
+        background-size: cover;
+        background-position:center;
+      
+    }
+
+    .background-Tales{
+        background-image:url(../img/Tales-de-Mileto.png) ;
+        background-size: cover;
+        background-position:center;
+      
+    }
+
+    .buscador{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    .buscador input{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .fa-heart {
+        color: red;
+      }
+      
+      .fa-heart-o {
+        color: gray;
+      }
+      
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+          
+    #grid-quotes{
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(2, 40%);
+            gap: 1rem;
+        } 
+    }
+
+    @media (max-width: 768px) {
+          
+        #grid-quotes{
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(1, 70%);
+                gap: 1rem;
+            } 
+        }

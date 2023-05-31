@@ -1,0 +1,21 @@
+body{
+    background-image: url(../../front_web/img/mant-bg.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat:repeat-y;    background-size: cover;
+}
+
+main{
+    background-color: rgb(255, 255, 255,0.4);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table{
+    background-color: whitesmoke;
+}
+
+#title-form{
+    border-radius: 7px;
+}

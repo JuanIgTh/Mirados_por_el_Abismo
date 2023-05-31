@@ -1,0 +1,16 @@
+#modal-message{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(249, 247, 247, 0.5);
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
