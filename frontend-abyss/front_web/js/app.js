@@ -54,6 +54,7 @@ const searchQuote = (event) => {
 }
 
 window.onload = async () => {
+    
     const respuesta = await fetch('http://127.0.0.1:8800/api/quotes');
     charactersJSON = await respuesta.json();
     init();
